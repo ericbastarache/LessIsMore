@@ -70,6 +70,8 @@ table {
 @justifyText: justify;
 
 * {
+	padding: 0;
+	margin: 0;
   box-sizing: border-box;
 }
 
@@ -79,8 +81,8 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
+	padding-top: 3.125em;
+	margin-bottom: 3.125em;
 }
 
 //Container
@@ -101,6 +103,9 @@ body {
 .navbar {
   background-color: @warmBlack;
   height: 3.125em;
+	position: fixed;
+	top: 0;
+	width: 100%;
   .nav {
     margin-left: 30%;
     list-style: none;
