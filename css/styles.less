@@ -58,6 +58,7 @@ table {
 @warmBlack: #004346;
 @caribbeanGreen: #098C8A;
 @white: #fff;
+@black: #000;
 
 /*Center and justify helpers */
 
@@ -68,6 +69,9 @@ table {
 @leftText: left;
 @rightText: right;
 @justifyText: justify;
+/*Fonts*/
+@Poppins: 'Poppins', sans-serif;
+@Lato: 'Lato', sans-serif;
 
 * {
 	padding: 0;
@@ -256,5 +260,59 @@ body {
 /*Typography*/
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Poppins', sans-serif;
+	padding: 0.313em;
+	font-family: @Poppins;
+}
+
+h1 {
+	font-size: 1.750em;
+}
+
+h2 {
+	font-size: 1.500em;
+}
+
+h3 {
+	font-size: 1.375em;
+}
+
+h4 {
+	font-size: 1.250em;
+}
+
+h5 {
+	font-size: 1.125em;
+}
+
+h6 {
+	font-size: 1em;
+}
+
+.h-shadow {
+	text-shadow: 1px 1px 1px @black;
+}
+
+.i-heading {
+	font-style: italic;
+}
+
+.b-heading {
+	font-weight: bold;
+}
+
+p {
+	font-family: @Lato;
+	line-height: 1.125em;
+	word-spacing: 0.325em;
+	padding: 0.750em;
+}
+
+/*Elements*/
+
+.btn {
+	padding: 0.625em;
+	margin-bottom: 0.313em;
+	border: none;
+	font-family: @Lato;
+	outline: none;
 }
