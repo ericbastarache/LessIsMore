@@ -343,12 +343,34 @@ p {
 	padding: 0.313em;
 	width: 100%;
 	margin-bottom: 0.313em;
-
-	
+	outline: none;
+	color: @white;
+	background: none;
 }
 
-.inp-default {
+.inp-under {
+	background: none;
+	border: 0.063em solid #cdcdcd;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+}
 
+.inp-shadow {
+	border: none;
+	border-bottom: 1px solid @middleBlue;
+	background: none;
+
+	&:focus {
+		box-shadow: 0.063em 0.063em 0.126em @middleBlue;
+		transition: 0.5s ease-in-out;
+	}
+}
+
+.inp-dark {
+	border: 1px solid @white;
+	background: @black;
+	box-shadow: none;
 }
 
 /*Footer*/
