@@ -93,9 +93,8 @@ body {
 
 /*Color Palette*/
 .palette {
-	width: 100%;
+	width: auto;
 	height: 6.250em;
-	display: block;
 }
 
 .color1, .color2, .color3, .color4, .color5 {
@@ -146,7 +145,7 @@ body {
   .nav {
     margin-left: 30%;
     list-style: none;
-
+		position: absolute;
     li {
       display: inline-block;
       padding: 0.938em;
@@ -160,9 +159,21 @@ body {
   }
 }
 
-#home {
-  width: 60em;
-  margin: @center;
+.showMenu {
+	text-decoration: none;
+	color: @white;
+	background: @warmBlack;
+	text-align: @centerText;
+	padding: 0.625em 0;
+	display: none;
+}
+
+input[id="showMenu"] {
+	display: none;
+}
+
+input[id="showMenu"]:checked ~ .nav {
+	display: block;
 }
 
 /*Grid System*/
@@ -420,4 +431,41 @@ p {
   width: 100%;
   height: 3.125em;
   background-color: @warmBlack;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 48.000em) {
+	.container-max {
+	  max-width: 100%;
+	}
+
+	.container {
+		max-width: 100%;
+	}
+
+	.nav {
+		position: static;
+		display: none;
+
+		li {
+			margin-bottom: 0.063em;
+		}
+
+		li, li a {
+			width: 100%;
+		}
+
+		.showMenu {
+			display: block;
+		}
+	}
+
+	.center-text {
+		text-align: left;
+	}
+
+	[class*="column-"] {
+	  float: none;
+	  padding: 15px;
+	}
 }
