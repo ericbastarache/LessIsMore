@@ -136,22 +136,25 @@ body {
   text-align: center;
 }
 
-.navbar {
+nav.navbar {
   background-color: @warmBlack;
   height: 3.125em;
 	position: fixed;
 	top: 0;
 	width: 100%;
-  .nav {
-    margin-left: 30%;
+  ul.nav {
+    margin: 0;
+		padding: 0;
     list-style: none;
 		position: absolute;
     li {
       display: inline-block;
       padding: 0.938em;
       font-size: 1em;
+			float: left;
 
       a {
+				display: block;
         color: @white;
         text-decoration: none;
       }
@@ -172,7 +175,7 @@ input[id="showMenu"] {
 	display: none;
 }
 
-input[id="showMenu"]:checked ~ .nav {
+input[id="showMenu"]:checked ~ ul.nav {
 	display: block;
 }
 
@@ -204,6 +207,7 @@ input[id="showMenu"]:checked ~ .nav {
 
 /* Media Query for Tablets */
 @media only screen and(min-width: 37.500em) {
+
   .column-med-1 {
     width: 8.33%;
   }
@@ -443,7 +447,7 @@ p {
 		max-width: 100%;
 	}
 
-	.nav {
+	ul.nav {
 		position: static;
 		display: none;
 
